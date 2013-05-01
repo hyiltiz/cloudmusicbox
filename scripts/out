@@ -1,0 +1,34 @@
+#! /bin/bash
+scary=(
+'\:'
+' '
+'）'
+'（'
+'\?'
+'\#'
+'\%'
+'\*'
+'\]'
+'\['
+'\}'
+'\{'
+'\('
+'\)'
+'\)'
+'__'
+'___'
+'____'
+'_____'
+'_-_'
+)
+
+maxloop=`echo ${#scary[@]}`
+echo "maxloop: ${maxloop}"
+
+number=1
+#m=37;n=1;for n in `seq 1 $m`;do echo "n: $n";echo $((${n}*100/${m}));done
+for i in "${scary[@]}" ; do
+  #echo -e $((${number}*100/${maxloop}))
+  #echo -e "Number is: ${number}"
+  number=$((${number}+1));
+done

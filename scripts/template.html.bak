@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+
+<!-- Website Design By: www.happyworm.com -->
+<title>psySunRise|音乐</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function(){
+
+	var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N"
+	}, [
+		{
+			title:"Top of The World",
+			artist:"Karen Carpenter",
+			mp3:"http://notes.yeshiwei.com/Music/top.mp3",
+			oga:"http://notes.yeshiwei.com/Music/top.ogg",
+			poster: "http://notes.yeshiwei.com/Music/defaultposter.jpg"
+		},
+		{
+			title:"American Life",
+			artist:"Madonna Louise Veronica Ciccone",
+			mp3:"http://notes.yeshiwei.com/Music/American.mp3",
+			oga:"http://notes.yeshiwei.com/Music/American.ogg",
+			poster: "http://notes.yeshiwei.com/Music/defaultposter.jpg"
+		},
+		{
+			title:"Time to Say Good Bye",
+			artist:"The Stark Palace",
+			mp3:"http://notes.yeshiwei.com/Music/time.mp3",
+			oga:"http://notes.yeshiwei.com/Music/time.ogg",
+			poster: "http://notes.yeshiwei.com/Music/defaultposter.jpg"
+		},
+                {
+                        title:"Price Tag",
+                        artist:"Jessie J",
+                        mp3:"http://notes.yeshiwei.com/Music/Price Tag.mp3",
+                        oga:"http://notes.yeshiwei.com/Music/Price Tag.ogg",
+                        poster: "http://notes.yeshiwei.com/Music/defaultposter.jpg"
+                },
+                {
+                        title:"我的歌声里",
+                        artist:"曲宛婷",
+                        mp3:"http://notes.yeshiwei.com/Music/我的歌声里.mp3",
+                        oga:"http://notes.yeshiwei.com/Music/我的歌声里.ogg",
+                        poster: "http://notes.yeshiwei.com/Music/defaultposter.jpg"
+                }
+
+	], {
+		playlistOptions: {
+			enableRemoveControls: true
+		},
+		swfPath: "js",
+		supplied: "webmv, ogv, m4v, oga, mp3"
+	});
+
+//tag-playlists
+
+	// Click handlers for jPlayerPlaylist method demo
+	// Audio mix playlist
+	$("#playlist-setPlaylist-jay").click(function() {
+		myPlaylist.setPlaylist([
+			{
+				title:"惊叹号",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/1.周杰伦 - 惊叹号.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/1.周杰伦 - 惊叹号.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+
+			{
+				title:"迷魂曲",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/2.周杰伦 - 迷魂曲.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/2.周杰伦 - 迷魂曲.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+		        {
+				title:"Mine Mine",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/3.周杰伦 - Mine Mine.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/3.周杰伦 - Mine Mine.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+
+			{
+				title:"公主病",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/4.周杰伦 - 公主病.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/4.周杰伦 - 公主病.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+
+			{
+				title:"你好吗",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/5.周杰伦 - 你好吗.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/5.周杰伦 - 你好吗.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+			{
+				title:"疗伤烧肉粽",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/6.周杰伦 - 疗伤烧肉粽.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/6.周杰伦 - 疗伤烧肉粽.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+
+			{
+				title:"琴伤",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/7.周杰伦 - 琴伤.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/7.周杰伦 - 琴伤.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+			{
+				title:"水手怕水",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/8.周杰伦 - 水手怕水.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/8.周杰伦 - 水手怕水.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+			{
+				title:"世界末末日",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/9.周杰伦 - 世界末末日.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/9.周杰伦 - 世界末末日.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+			{
+				title:"皮影戏",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/10.周杰伦 - 皮影戏.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/10.周杰伦 - 皮影戏.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			},
+			{
+				title:"超跑女神.mp3",
+				artist:"周杰伦",
+				mp3:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/11.周杰伦 - 超跑女神.mp3",
+				oga:"http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/11.周杰伦 - 超跑女神.ogg",
+				poster: "http://notes.yeshiwei.com/Music/[2011-11-11]周杰伦 - 惊叹号(台版320K)/cover.jpg",
+			}
+
+
+		]);
+	});
+
+//liang jing ru
+
+	$("#playlist-setPlaylist-liangjingru-yongqi").click(function() {
+		myPlaylist.setPlaylist([
+			{
+				title:"勇气",
+				artist:"梁静茹",
+				mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 勇气.mp3",
+				oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 勇气.ogg",
+				poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+			},
+                        {
+                                title:"半个月亮",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 半个月亮.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 半个月亮.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"多数是晴天",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 多数是晴天.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 多数是晴天.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"如果有一天",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 如果有一天.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 如果有一天.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"昨天",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 昨天.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 昨天.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"最后",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 最后.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 最后.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"最烂的理由",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 最烂的理由.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 最烂的理由.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"没有水的游泳池",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 没有水的游泳池.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 没有水的游泳池.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"爱你不是两三天",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 爱你不是两三天.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 爱你不是两三天.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        },
+                        {
+                                title:"爱计较",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 爱计较.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/勇气/梁静茹 - 爱计较.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/勇气/cover.jpg",
+                        }
+
+		]);
+	});
+	
+	//梁静茹-情歌
+	$("#playlist-setPlaylist-liangjingru-qingge").click(function() {
+		myPlaylist.setPlaylist([
+                        {
+                                title:"PK",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - PK.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - PK.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                        },
+                        {
+                                title:"不敢当",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 不敢当.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 不敢当.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                        },
+                        {
+                                title:"儿歌",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 儿歌.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 儿歌.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                        },
+                        {
+                                title:"别再为他流泪",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 别再为他流泪.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 别再为他流泪.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"天灯",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 天灯.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 天灯.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"属于",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 属于.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 属于.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"情歌",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 情歌.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 情歌.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"找个人",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 找个人.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 找个人.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"没有如果",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 没有如果.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 没有如果.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"爱情之所以为爱情",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 爱情之所以为爱情.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 爱情之所以为爱情.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"用力抱着",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 用力抱着.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 用力抱着.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         },
+                        {
+                                title:"风笛手",
+                                artist:"梁静茹",
+                                mp3: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 风笛手.mp3",
+                                oga: "http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/梁静茹 - 风笛手.ogg",
+                                poster:"http://notes.yeshiwei.com/Music/梁静茹/静茹&情歌-别再为他流泪/cover.jpg",
+                         }
+
+]);
+});
+
+
+
+
+	// Video mix playlist
+
+	$("#playlist-setPlaylist-video-mix").click(function() {
+		myPlaylist.setPlaylist([
+			{
+				title:"Big Buck Bunny Trailer",
+				artist:"Blender Foundation",
+				m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+				ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+				poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+			},
+			{
+				title:"Finding Nemo Teaser",
+				artist:"Pixar",
+				m4v: "http://www.jplayer.org/video/m4v/Finding_Nemo_Teaser.m4v",
+				ogv: "http://www.jplayer.org/video/ogv/Finding_Nemo_Teaser.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Finding_Nemo_Teaser.webm",
+				poster: "http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png"
+			},
+			{
+				title:"Incredibles Teaser",
+				artist:"Pixar",
+				m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
+				ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
+				poster: "http://www.jplayer.org/video/poster/Incredibles_Teaser_640x272.png"
+			}
+		]);
+	});
+
+	
+	// Media mix playlist
+
+	$("#playlist-setPlaylist-media-mix").click(function() {
+		myPlaylist.setPlaylist([
+			{
+				title:"Cro Magnon Man",
+				artist:"The Stark Palace",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg",
+				poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+			},
+			{
+				title:"Your Face",
+				artist:"The Stark Palace",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg",
+				poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+			},
+			{
+				title:"Hidden",
+				artist:"Miaow",
+				free: true,
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg",
+				poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+			},
+			{
+				title:"Big Buck Bunny Trailer",
+				artist:"Blender Foundation",
+				m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+				ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+				poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+			},
+			{
+				title:"Finding Nemo Teaser",
+				artist:"Pixar",
+				m4v: "http://www.jplayer.org/video/m4v/Finding_Nemo_Teaser.m4v",
+				ogv: "http://www.jplayer.org/video/ogv/Finding_Nemo_Teaser.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Finding_Nemo_Teaser.webm",
+				poster: "http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png"
+			},
+			{
+				title:"Cyber Sonnet",
+				artist:"The Stark Palace",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg",
+				poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+			},
+			{
+				title:"Incredibles Teaser",
+				artist:"Pixar",
+				m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
+				ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
+				poster: "http://www.jplayer.org/video/poster/Incredibles_Teaser_640x272.png"
+			},
+			{
+				title:"Tempered Song",
+				artist:"Miaow",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-01-Tempered-song.ogg",
+				poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+			},
+			{
+				title:"Lentement",
+				artist:"Miaow",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-03-Lentement.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
+				poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+			}
+		]);
+	});
+
+	// Miaow tracks
+
+	$("#playlist-add-bubble").click(function() {
+		myPlaylist.add({
+			title:"Bubble",
+			artist:"Miaow",
+			free:true,
+			mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg",
+			poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+		});
+	});
+
+	$("#playlist-add-hidden").click(function() {
+		myPlaylist.add({
+			title:"Hidden",
+			artist:"Miaow",
+			free: true,
+			mp3:"http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg",
+			poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+		});
+	});
+
+	$("#playlist-add-tempered-song").click(function() {
+		myPlaylist.add({
+			title:"Tempered Song",
+			artist:"Miaow",
+			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/Miaow-01-Tempered-song.ogg",
+			poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+		});
+	});
+
+	$("#playlist-add-lentement").click(function() {
+		myPlaylist.add({
+			title:"Lentement",
+			artist:"Miaow",
+			mp3:"http://www.jplayer.org/audio/mp3/Miaow-03-Lentement.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
+			poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
+		});
+	});
+
+	// The Stark Palace tracks
+
+	$("#playlist-add-cro-magnon-man").click(function() {
+		myPlaylist.add({
+			title:"Cro Magnon Man",
+			artist:"The Stark Palace",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg",
+			poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+		});
+	});
+
+	$("#playlist-add-your-face").click(function() {
+		myPlaylist.add({
+			title:"Your Face",
+			artist:"The Stark Palace",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg",
+			poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+		});
+	});
+
+	$("#playlist-add-cyber-sonnet").click(function() {
+		myPlaylist.add({
+			title:"Cyber Sonnet",
+			artist:"The Stark Palace",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg",
+			poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+		});
+	});
+
+	// Videos
+
+	$("#playlist-add-big-buck-bunny").click(function() {
+		myPlaylist.add({
+			title:"Big Buck Bunny Trailer",
+			artist:"Blender Foundation",
+			m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+			ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+			poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+		});
+	});
+
+	$("#playlist-add-finding-nemo").click(function() {
+		myPlaylist.add({
+			title:"Finding Nemo Teaser",
+			artist:"Pixar",
+			m4v: "http://www.jplayer.org/video/m4v/Finding_Nemo_Teaser.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Finding_Nemo_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Finding_Nemo_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png"
+		});
+	});
+
+	$("#playlist-add-incredibles").click(function() {
+		myPlaylist.add({
+			title:"Incredibles Teaser",
+			artist:"Pixar",
+			m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Incredibles_Teaser_640x272.png"
+		});
+	});
+
+	// The remove commands
+
+	$("#playlist-remove").click(function() {
+		myPlaylist.remove();
+	});
+
+	$("#playlist-remove--2").click(function() {
+		myPlaylist.remove(-2);
+	});
+	$("#playlist-remove--1").click(function() {
+		myPlaylist.remove(-1);
+	});
+	$("#playlist-remove-0").click(function() {
+		myPlaylist.remove(0);
+	});
+	$("#playlist-remove-1").click(function() {
+		myPlaylist.remove(1);
+	});
+	$("#playlist-remove-2").click(function() {
+		myPlaylist.remove(2);
+	});
+
+	// The shuffle commands
+
+	$("#playlist-shuffle").click(function() {
+		myPlaylist.shuffle();
+	});
+
+	$("#playlist-shuffle-false").click(function() {
+		myPlaylist.shuffle(false);
+	});
+	$("#playlist-shuffle-true").click(function() {
+		myPlaylist.shuffle(true);
+	});
+
+	// The select commands
+
+	$("#playlist-select--2").click(function() {
+		myPlaylist.select(-2);
+	});
+	$("#playlist-select--1").click(function() {
+		myPlaylist.select(-1);
+	});
+	$("#playlist-select-0").click(function() {
+		myPlaylist.select(0);
+	});
+	$("#playlist-select-1").click(function() {
+		myPlaylist.select(1);
+	});
+	$("#playlist-select-2").click(function() {
+		myPlaylist.select(2);
+	});
+
+	// The next/previous commands
+
+	$("#playlist-next").click(function() {
+		myPlaylist.next();
+	});
+	$("#playlist-previous").click(function() {
+		myPlaylist.previous();
+	});
+
+	// The play commands
+
+	$("#playlist-play").click(function() {
+		myPlaylist.play();
+	});
+
+	$("#playlist-play--2").click(function() {
+		myPlaylist.play(-2);
+	});
+	$("#playlist-play--1").click(function() {
+		myPlaylist.play(-1);
+	});
+	$("#playlist-play-0").click(function() {
+		myPlaylist.play(0);
+	});
+	$("#playlist-play-1").click(function() {
+		myPlaylist.play(1);
+	});
+	$("#playlist-play-2").click(function() {
+		myPlaylist.play(2);
+	});
+
+	// The pause command
+
+	$("#playlist-pause").click(function() {
+		myPlaylist.pause();
+	});
+
+	// Changing the playlist options
+
+	// Option: autoPlay
+
+	$("#playlist-option-autoPlay-true").click(function() {
+		myPlaylist.option("autoPlay", true);
+	});
+	$("#playlist-option-autoPlay-false").click(function() {
+		myPlaylist.option("autoPlay", false);
+	});
+
+	// Option: enableRemoveControls
+
+	$("#playlist-option-enableRemoveControls-true").click(function() {
+		myPlaylist.option("enableRemoveControls", true);
+	});
+	$("#playlist-option-enableRemoveControls-false").click(function() {
+		myPlaylist.option("enableRemoveControls", false);
+	});
+
+	// Option: displayTime
+
+	$("#playlist-option-displayTime-0").click(function() {
+		myPlaylist.option("displayTime", 0);
+	});
+	$("#playlist-option-displayTime-fast").click(function() {
+		myPlaylist.option("displayTime", "fast");
+	});
+	$("#playlist-option-displayTime-slow").click(function() {
+		myPlaylist.option("displayTime", "slow");
+	});
+	$("#playlist-option-displayTime-2000").click(function() {
+		myPlaylist.option("displayTime", 2000);
+	});
+
+	// Option: addTime
+
+	$("#playlist-option-addTime-0").click(function() {
+		myPlaylist.option("addTime", 0);
+	});
+	$("#playlist-option-addTime-fast").click(function() {
+		myPlaylist.option("addTime", "fast");
+	});
+	$("#playlist-option-addTime-slow").click(function() {
+		myPlaylist.option("addTime", "slow");
+	});
+	$("#playlist-option-addTime-2000").click(function() {
+		myPlaylist.option("addTime", 2000);
+	});
+
+	// Option: removeTime
+
+	$("#playlist-option-removeTime-0").click(function() {
+		myPlaylist.option("removeTime", 0);
+	});
+	$("#playlist-option-removeTime-fast").click(function() {
+		myPlaylist.option("removeTime", "fast");
+	});
+	$("#playlist-option-removeTime-slow").click(function() {
+		myPlaylist.option("removeTime", "slow");
+	});
+	$("#playlist-option-removeTime-2000").click(function() {
+		myPlaylist.option("removeTime", 2000);
+	});
+
+	// Option: shuffleTime
+
+	$("#playlist-option-shuffleTime-0").click(function() {
+		myPlaylist.option("shuffleTime", 0);
+	});
+	$("#playlist-option-shuffleTime-fast").click(function() {
+		myPlaylist.option("shuffleTime", "fast");
+	});
+	$("#playlist-option-shuffleTime-slow").click(function() {
+		myPlaylist.option("shuffleTime", "slow");
+	});
+	$("#playlist-option-shuffleTime-2000").click(function() {
+		myPlaylist.option("shuffleTime", 2000);
+	});
+
+	// Equivalent commands
+
+	$("#playlist-equivalent-1-a").click(function() {
+		myPlaylist.add({
+			title:"Your Face",
+			artist:"The Stark Palace",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg",
+			poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+		}, true);
+	});
+
+	$("#playlist-equivalent-1-b").click(function() {
+		myPlaylist.add({
+			title:"Your Face",
+			artist:"The Stark Palace",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+			oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg",
+			poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+		});
+		myPlaylist.play(-1);
+	});
+
+	// AVOID COMMANDS
+
+	$("#playlist-avoid-1").click(function() {
+		myPlaylist.remove(2); // Removes the 3rd item
+		myPlaylist.remove(3); // Ignored unless removeTime=0: Where it removes the 4th item, which was originally the 5th item.
+	});
+
+
+});
+//]]>
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27650007-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+
+
+<table>
+<tr>
+<td width=600px valign="top">
+		<div id="jp_container_N" class="jp-video jp-video-270p" align="left">
+			<div class="jp-type-playlist">
+				<div id="jquery_jplayer_N" class="jp-jplayer"></div>
+				<div class="jp-gui">
+					<div class="jp-video-play">
+						<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+					</div>
+					<div class="jp-interface">
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-current-time"></div>
+						<div class="jp-duration"></div>
+						<div class="jp-controls-holder">
+							<ul class="jp-controls">
+								<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+								<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+								<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+								<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+								<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+								<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+							</ul>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+							<ul class="jp-toggles">
+								<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
+								<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+								<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+								<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+								<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+								<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+							</ul>
+						</div>
+						<div class="jp-title">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="jp-playlist">
+					<ul>
+						<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+						<li></li>
+					</ul>
+				</div>
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
+			<p style="margin-top:1em;">
+
+</td>
+<td valign="top">
+<!--html-->
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

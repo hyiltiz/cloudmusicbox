@@ -1,0 +1,53 @@
+#! /bin/bash
+# Used to satisfy some requirements by notes.yeshiwei.com
+
+# html generation does not handle quirks, so NO QUIRKS!
+echo "==================================================================="
+echo "Please wait while correcting filenames"
+echo "This will take a few minutes..."
+echo ""
+scary=(
+'\:'
+' '
+'）'
+'（'
+'\?'
+'\#'
+'\%'
+'\*'
+'\]'
+'\['
+'\}'
+'\{'
+'\('
+'\)'
+'\)'
+'__'
+'___'
+'____'
+'_____'
+'_-_'
+)
+
+maxloop=$(echo ${#scary[@]})
+number=1
+
+for i in "${scary[@]}" ; do
+  echo "$((${number}*100/${maxloop})) %: Now correcting $i ...";
+  number=$((${number}+1));
+
+  # rename directories
+  find . -type d -exec rename "s/${i}/_/g" '{}' \;
+
+  # rename files
+  find . -type f -exec rename "s/${i}/_/g" '{}' \;
+
+  # rename mp3 files
+  find . -type f -iname '*.mp3' -exec rename "s/${i}/_/g" '{}' \;
+done
+echo "==== No quirky filenames now! ====================================="
+
+# Directory and other files has some special permissions
+echo "==== Now Setting File and Folder's Permissions ====================";
+find . -type d -exec chmod 755 '{}' \;
+find . -type f -iname '*.mp3' -exec chmod 744 '{}' \;
