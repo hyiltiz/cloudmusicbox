@@ -38,7 +38,7 @@ maxloop=$(echo ${#scary[@]})
 number=1
 
 for i in "${scary[@]}" ; do
-  echo "$((${number}*100/${maxloop})) %: Now correcting ->i<-";
+  echo "$((${number}*100/${maxloop})) %: Now correcting ->${i}<-";
   number=$((${number}+1));
 
   # rename directories
