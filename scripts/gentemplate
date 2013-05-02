@@ -11,11 +11,11 @@ echo $line1
 echo $line2
 pwd
 
-cp $2 ${2}.bak
+cp $2 .${2}
 split $2 -l $line1 1
 split $2 -l $(($line2-1)) 2
 
 markdown $1 >> 1aa
 cat 2ab >> 1aa
 cp 1aa template.html
-rm 1a* 2a* xa*
+rm 1a* 2a*
