@@ -1,0 +1,3 @@
+Install `markdown' in the server.
+Use .ini file for configuration. For this, read ./config.ini file using python in file ./script/mkhtml.py
+fix mp32ogg.py. It does nothing now!
