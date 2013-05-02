@@ -1,0 +1,21 @@
+#! /bin/bash
+# generate template using README.md
+# by hyiltiz <hyiltiz AT gmail DOT com> 
+# Thu May  2 23:11:55 CST 2013
+
+template=$2
+line1=$(grep -n '</table>' $2 |awk -F ':' '{print $1}')
+line2=$(grep -n '</body>' $2 |awk -F ':' '{print $1}')
+echo $template
+echo $line1
+echo $line2
+pwd
+
+cp $2 ${2}.bak
+split $2 -l $line1 1
+split $2 -l $(($line2-1)) 2
+
+markdown $1 >> 1aa
+cat 2ab >> 1aa
+cp 1aa template.html
+rm 1a* 2a* xa*

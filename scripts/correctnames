@@ -7,10 +7,10 @@ echo "Please wait while correcting filenames"
 echo "This will take a few minutes..."
 echo ""
 scary=(
-'\:'
 ' '
 '）'
 '（'
+'\:'
 '\?'
 '\#'
 '\%'
@@ -22,18 +22,23 @@ scary=(
 '\('
 '\)'
 '\)'
-'__'
-'___'
-'____'
-'_____'
 '_-_'
+'-_'
+'_-'
+'_\._'
+'\._'
+'_\.'
+'_____'
+'____'
+'___'
+'__'
 )
 
 maxloop=$(echo ${#scary[@]})
 number=1
 
 for i in "${scary[@]}" ; do
-  echo "$((${number}*100/${maxloop})) %: Now correcting $i ...";
+  echo "$((${number}*100/${maxloop})) %: Now correcting ->i<-";
   number=$((${number}+1));
 
   # rename directories
