@@ -1,3 +1,5 @@
+#coding=utf-8
+
 # Copyright (C) <2013>  <Yeshiwei>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -14,7 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-#coding=utf-8
 import os, eyeD3,uuid
 sysroots=['/home/psy/music']
 searchpath=['/home/psy/music/']
