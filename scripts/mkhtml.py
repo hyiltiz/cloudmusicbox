@@ -17,6 +17,22 @@
 #
 
 import os, eyeD3,uuid
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['main']['coding'])
+print(config['main']['sysroots'])
+print(config['main']['searchpath'])
+print(config['main']['webroot'])
+print(config['main']['default_poster'])
+#print(config['main']['path'])     # -> "/path/name/"
+#config['DEFAULT']['path'] = '/var/shared/'    # update
+#config['DEFAULT']['default_message'] = 'Hey! help me!!'   # create
+
+with open('FILE.INI', 'w') as configfile:    # save
+    config.write(configfile)
+
 sysroots=['/home/psy/music']
 searchpath=['/home/psy/music/']
 webroot='http://notes.yeshiwei.com/psy/music'
