@@ -1,6 +1,6 @@
 #coding=utf-8
 
-# Copyright (C) <2013>  <Yeshiwei>
+# Copyright (C) <2013>  <Hörmetjan Yiltiz, Yeshiwei>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
