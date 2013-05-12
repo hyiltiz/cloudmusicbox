@@ -25,21 +25,27 @@ config.read('config.ini')
 print config.get('main', 'sysroots')
 
 #config.get('main', 'coding')
-sysroots = config.get('main', 'sysroots')
-searchpath = config.get('main', 'searchpath')
-webroot = config.get('main', 'webroot')
-default_poster= config.get('main', 'default_poster')
-#print(config['main']['path'])     # -> "/path/name/"
-#config['DEFAULT']['path'] = '/var/shared/'    # update
-#config['DEFAULT']['default_message'] = 'Hey! help me!!'   # create
+#sysroots = config.get('main', 'sysroots')
+#searchpath = config.get('main', 'searchpath')
+#webroot = config.get('main', 'webroot')
+#default_poster= config.get('main', 'default_poster')
+#print sysroots
+#print "This is the searchpath"
+#print searchpath
+#print ""
+#print webroot
+#print default_poster
+##print(config['main']['path'])     # -> "/path/name/"
+##config['DEFAULT']['path'] = '/var/shared/'    # update
+##config['DEFAULT']['default_message'] = 'Hey! help me!!'   # create
 
-#with open('config.ini', 'w') as configfile:    # save
-    #config.write(configfile)
+##with open('config.ini', 'w') as configfile:    # save
+    ##config.write(configfile)
 
-#sysroots=['/home/psy/music']
-#searchpath=['/home/psy/music/']
-#webroot='http://notes.yeshiwei.com/psy/music'
-#default_poster='http://notes.yeshiwei.com/Music/defaultposter.jpg'
+sysroots=['/home/psy/music']
+searchpath=['/home/psy/music/']
+webroot='http://sunrise.yeshiwei.com/'
+default_poster='http://notes.yeshiwei.com/Music/defaultposter.jpg'
 
 LICENSE_TERM = """
 <cloudmusicbox>  Copyright (C) <2013>  <Yeshiwei>'
@@ -202,6 +208,7 @@ def checkpath(path):
     global Allsongs
     if os.path.isdir(path):
         dirlist=os.listdir(path)
+        print dirlist
         for i in dirlist:
             checkpath(path+'/'+i)
     else:

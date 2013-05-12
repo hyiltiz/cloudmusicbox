@@ -1,4 +1,5 @@
 #! /usr/bin/python2
+# encoding=utf-8
 
 # Copyright (C) <2013>  <Hörmetjan Yiltiz, Yeshiwei>
 #

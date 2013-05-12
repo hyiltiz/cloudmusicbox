@@ -10,6 +10,8 @@ Setup instructions:
     directory tree whose deepest folders should contain only mp3/ogg files,
     which will be automatically transformed as a play-list.
  1. run `make` in `cloudmusicbox`
+ 1. If have any problems in the above step, make sure you have packages     
+    `make` `python-eyed3` installed.
  1. Voilà! Go to the directory with your favourite browser and enjoy. You  
     can serve the web with any engine you prefer.
 
