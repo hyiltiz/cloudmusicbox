@@ -28,7 +28,7 @@ webroot = config.get('main', 'webroot')
 default_poster= config.get('main', 'default_poster')
 
 LICENSE_TERM = """
-<cloudmusicbox>  Copyright (C) <2013>  <Yeshiwei>'
+<cloudmusicbox>  Copyright (C) <2013>  <Hörmetjan, Yeshiwei>'
 This program comes with ABSOLUTELY NO WARRANTY; for details see LICENSE'
 This is free software, and you are welcome to redistribute it'
 under certain conditions; see LICENSE for details.'
@@ -188,7 +188,6 @@ def checkpath(path):
     global Allsongs
     if os.path.isdir(path):
         dirlist=os.listdir(path)
-        print dirlist
         for i in dirlist:
             checkpath(path+'/'+i)
     else:
@@ -243,9 +242,6 @@ if __name__=="__main__":
     Playlists={}
     Allsongs=None
     for p in searchpath:
-        print "-----"
-        print p
-        print "-----"
         checkpath(p)
     template=open('template.html','r')
     output=open('index.html','w')
