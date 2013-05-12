@@ -22,30 +22,10 @@ import ConfigParser
 config = ConfigParser.ConfigParser()
 config.read('config.ini')
 
-print config.get('main', 'sysroots')
-
-#config.get('main', 'coding')
-#sysroots = config.get('main', 'sysroots')
-#searchpath = config.get('main', 'searchpath')
-#webroot = config.get('main', 'webroot')
-#default_poster= config.get('main', 'default_poster')
-#print sysroots
-#print "This is the searchpath"
-#print searchpath
-#print ""
-#print webroot
-#print default_poster
-##print(config['main']['path'])     # -> "/path/name/"
-##config['DEFAULT']['path'] = '/var/shared/'    # update
-##config['DEFAULT']['default_message'] = 'Hey! help me!!'   # create
-
-##with open('config.ini', 'w') as configfile:    # save
-    ##config.write(configfile)
-
-sysroots=['/home/psy/music']
-searchpath=['/home/psy/music/']
-webroot='http://sunrise.yeshiwei.com/'
-default_poster='http://notes.yeshiwei.com/Music/defaultposter.jpg'
+sysroots = [config.get('main', 'sysroots')]
+searchpath = [config.get('main', 'searchpath')]
+webroot = config.get('main', 'webroot')
+default_poster= config.get('main', 'default_poster')
 
 LICENSE_TERM = """
 <cloudmusicbox>  Copyright (C) <2013>  <Yeshiwei>'
@@ -263,15 +243,18 @@ if __name__=="__main__":
     Playlists={}
     Allsongs=None
     for p in searchpath:
-	checkpath(p)
+        print "-----"
+        print p
+        print "-----"
+        checkpath(p)
     template=open('template.html','r')
     output=open('index.html','w')
     for l in template.readlines():
-	if l == '//tag-playlists\n':
-	    output.write(alljs())
-	elif l == '<!--html-->\n':
-	    output.write(allhtml())
-	else:
-	    output.write(l)
+        if l == '//tag-playlists\n':
+            output.write(alljs())
+        elif l == '<!--html-->\n':
+            output.write(allhtml())
+        else:
+            output.write(l)
     template.close()
     output.close()
