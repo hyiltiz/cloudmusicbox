@@ -22,7 +22,7 @@ Setup instructions:
 Thanks
 ------
 
-This website is supported for free (both *free as in free speech* and *free as in free beer*) by [yeshiwei][], which is **very** generous of him. [His blog][] is quite interesting. You may also find several ways to contact him. If interested and want to have *your own* music box, feel free to `clone` or `fork` the [Github Source][].
+This website is supported for free (both *free as in free speech* and *free as in free beer*) by [yeshiwei][], which is **very** generous of him. [His blog][] is quite interesting. You may also find several ways to contact him. If interested and want to have *your own* music box, feel free to `clone` or `fork` the [Github Page][].
 
 [me]: mailto:hyiltiz@gmail.com
 [station]: http://notes.yeshiwei.com/psy/music
@@ -30,3 +30,4 @@ This website is supported for free (both *free as in free speech* and *free as i
 [yeshiwei]: mailto:yeshiwei.math@gmail.com
 [His blog]: http://notes.yeshiwei.com
 [Github Source]: https://github.com/hyiltiz/cloudmusicbox
+[Github Page]: http://hyiltiz.github.io/cloudmusicbox
